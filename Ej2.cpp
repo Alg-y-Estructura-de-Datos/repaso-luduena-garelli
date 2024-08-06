@@ -1,9 +1,26 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+unsigned long long factorial(int n)
+{
+  if (n == 0)
+  {
+    return 1;
+  }
+  else
+  {
+    return n * factorial(n - 1);
+  }
+}
 
-    cout << "Examen Final Prog 3" << endl;
+int main()
+{
+  int n;
 
-    return 0;
+  cout << "Ingrese un número: ";
+  cin >> n;
+
+  cout << "El factorial de " << n << " es " << factorial(n) << endl;
+
+  return 0;
 }
